@@ -1,2 +1,2 @@
-# Lokaverkefni á tölvubraut
+# Lokaverkefni á tölvubraut (ROB, VEF, LINUX)
 

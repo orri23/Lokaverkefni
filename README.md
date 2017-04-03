@@ -1,1 +1,2 @@
-# Lokaverkefni
+# Lokaverkefni á tölvubraut
+

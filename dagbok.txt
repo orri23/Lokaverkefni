@@ -3,7 +3,7 @@ Bjó til repository og bætti hópfélaga mínum við það honum Eysteini Orra.
 Skipulagning verkefnisins hafin að fullu.
 Talaði við Þórarinn - við tengjum Linux við hina áfanga þannig við erum með Ubuntu server á Digital Ocean.
 En þurfum að gera 5-6 línu skriptu sem gerir eitthvað automatískt. Skripta sem
-gerir eitthvað inn á vefsíðunni.   
+gerir eitthvað inn á vefsíðunni til dæmis.   
 
 
  

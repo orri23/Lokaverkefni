@@ -5,5 +5,12 @@ Talaði við Þórarinn - við tengjum Linux við hina áfanga þannig við erum
 En þurfum að gera 5-6 línu skriptu sem gerir eitthvað automatískt. Skripta sem
 gerir eitthvað inn á vefsíðunni til dæmis.   
 
+4.4.2017 - Kristófer
+
+Bætti við Stefáni Atla í repository-ið.
+Uppsetning var gerð, tenging við Digital Ocean server komin og fileZilla. Margir file-ar sem við þurfum í bili eru komnir inn á Github (php kóði, arduino kóði, Adafruit library fyrir hita- og rakamæli).
+Hópurinn búinn að skipuleggja sig aðeins. Við notum Mini3 framework.
+Byrjað að hanna sign up function (Hægt að sign-a inn nýjan notanda og sumarhús). 
+
 
  

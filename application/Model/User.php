@@ -93,11 +93,11 @@ class User extends Model{
                     $firstRow = $data[0];
                     if ($_POST['Password'] == $firstRow['Password']) {
                         session_start();
-                        $_SESSION['login'] = $data[0]['login'];
+                        $_SESSION['login'] = true;
                         session_regenerate_id();
                         header("Location: $redirect");
                         echo $_SESSION['login'];
-                    } else {                        
+                    } else {
                         //header("Location: http://138.68.150.56/Verkefni6/Login");
                         echo "<p>You must log in before venturing forth.</p>";
                     }
@@ -118,6 +118,7 @@ class User extends Model{
         $query = $this->db->prepare($sql);
         $query->execute();
 
+        $_SESSION['login'] = true;
         $results = $query->fetchAll();
         return $results;
     }

@@ -6,12 +6,20 @@
  * Time: 11:52
  */
 
-/*
-if (!$_SESSION['login'])
+
+/*if (!$_SESSION['login'])
 {
-    header("Location: http://138.68.150.56/Verkefni6/Login");
+  echo 'asdasdasdasd';
+    //header("Location: http://138.68.150.56/Verkefni6/Login");
+}*/
+session_start();
+if ($_SESSION['login'] == true) {
+  //header("Location: http://138.68.150.56/Verkefni6/Login");
 }
-*/
+else {
+  header("Location: http://138.68.150.56/Verkefni6/Login");
+}
+
 
 
 if (isset($_POST['logout']))

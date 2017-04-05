@@ -18,8 +18,11 @@ class ProfileController
     public function index()
     {
         //User Class initialized
+
         $user = new User();
         $results = $user->FetchUser();
+
+
         require APP . 'view/_templates/header.php';
         require APP . 'view/profile/profile.php';
         require APP . 'view/_templates/footer.php';
@@ -27,5 +30,3 @@ class ProfileController
 }
 
 ?>
-
-

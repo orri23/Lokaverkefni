@@ -13,16 +13,16 @@
 
 <div class="container">
     <div class="box">
-        <H1>Log in</H1>
+        <H1>Login</H1>
         <form name="login" method="post">
 
             <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <input type="text" placeholder="Enter Username" name="username" required><br>
 
             <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="Password" required>
+            <input type="password" placeholder="Enter Password" name="Password" required><br>
 
-            <input name="login" type="submit" value="Login" class="pure-button pure-button-active">
+            <input name="login" type="submit" value="Login" class="pure-button pure-button-active"><br>
         </form>
     </div>
 </div>

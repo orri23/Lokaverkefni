@@ -17,7 +17,7 @@ Project búið til á Github. (To do, það sem er búið og svo framvegis)
 6.6.2017 - Kristófer
 
 Vann í css á upphafsíðu og breytti aðeins til þar - Stærð á letri og fleira. 
-Fann út flotta litasamsetningu fyrir síðuna en á eftir að útfæra það meira.
+Fann út flotta litasamsetningu fyrir síðuna en á eftir að útfæra það meira. Búinn að bæta lit við background color og takkana.
 Lagfærði kóða og texta í login.php og index.php , t.d. bætti við <br> til þess að það líti aðeins betur út. 
 
 

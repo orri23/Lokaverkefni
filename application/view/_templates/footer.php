@@ -1,6 +1,6 @@
 
     <div class="footer">
-        Arduino
+        
     </div>
 
     <!-- jQuery, loaded in the recommended protocol-less way -->

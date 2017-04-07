@@ -1,7 +1,7 @@
 <div class="container">
     <div class="box">
         <form name="fetching" method="post">
-            <input name="fetch" type="submit" value="Fetch" class="button">
+            <input name="fetch" type="submit" value="Ná í gögn!" class="button">
         </form>
         <table>
             <thead style="background-color: #ddd; font-weight: bold;">

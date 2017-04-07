@@ -13,7 +13,7 @@ use Mini\Core\Model;
 
 class User extends Model{
 
-    public function newUser($full_name_from_signup, $user_name_from_signup,$database_password_hash, $email_from_signup)
+  /*  public function newUser($full_name_from_signup, $user_name_from_signup,$database_password_hash, $email_from_signup)
     {
         //Undirbúið sql fyrir insert skipun
         $sth = $this->dbh->prepare("INSERT INTO user(username, name, password,email)
@@ -35,6 +35,30 @@ class User extends Model{
             echo "Error: " . $e->getMessage();
             return false;
         }
+
+
+    }*/
+
+    public function createUser()
+    {
+      $sth = $this->db->prepare("INSERT INTO Notandi(username, Fname, Lname, Password, KT, Phone, Email, Address)
+      VALUES (:username, :fname, :lname, :password, :KT, :Phone, :Email, :address)");
+
+      $sth->bindParam(':fname', $_POST['fname']);
+      $sth->bindParam(':lname', $_POST['lname']);
+      $sth->bindParam(':username', $_POST['uname']);
+      $sth->bindParam(':password', $_POST['psw']);
+      $sth->bindParam(':KT', $_POST['kt']);
+      $sth->bindParam(':Phone', $_POST['phone']);
+      $sth->bindParam(':Email', $_POST['email']);
+      $sth->bindParam(':address', $_POST['address']);
+
+      if (!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['uname'])
+    && !empty($_POST['psw'])) {
+
+        $sth->execute();
+      }
+
 
     }
 

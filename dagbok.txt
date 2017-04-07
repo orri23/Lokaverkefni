@@ -14,11 +14,16 @@ Byrjað að hanna sign up function (Hægt að sign-a inn nýjan notanda og sumar
 Project búið til á Github. (To do, það sem er búið og svo framvegis)
 
 
-6.6.2017 - Kristófer
+6.4.2017 - Kristófer
 
 Vann í css á upphafsíðu og breytti aðeins til þar - Stærð á letri og fleira. 
 Fann út flotta litasamsetningu fyrir síðuna en á eftir að útfæra það meira. Búinn að bæta lit við background color og takkana.
 Lagfærði kóða og texta í login.php og index.php , t.d. bætti við <br> til þess að það líti aðeins betur út. 
+
+7.4.2017 - Kristófer 
+
+Lagaði til kóða í signup.php, header, footer, data og bætti við, íslenskaði margt. Var að fikta í að færa home og gögn takkann
+í miðjuna en fann ekki alveg út úr því en ég mun halda því áfram. Það er ekki eins auðvelt og ég hélt, fyrir mig allavega, er ekki sérlega góður í þessu öllu saman. 
 
 
  

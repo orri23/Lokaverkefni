@@ -106,9 +106,10 @@ class User extends Model{
                 echo $e->getMessage();
             }
             */
-
+            //var að testa eitthvað með þetta en ætla bara að geyma þetta þangað til seinna
             if (!empty($_POST['username']) && !empty($_POST['Password'])) {
-                $sql = 'SELECT * FROM Notandi WHERE username = ?';
+                //$uname = $_POST['username'];
+                $sql = "SELECT * FROM Notandi WHERE username = ?";
                 $query = $this->db->prepare($sql);
                 try {
                     $redirect = "http://138.68.150.56/Verkefni6/Profile";
@@ -142,9 +143,14 @@ class User extends Model{
         $query = $this->db->prepare($sql);
         $query->execute();
 
-        $_SESSION['login'] = true;
         $results = $query->fetchAll();
         return $results;
+    }
+
+    public function SessionCheck()
+    {
+
+      $_SESSION['login'] = true;
     }
 
 }

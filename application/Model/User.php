@@ -62,6 +62,43 @@ class User extends Model{
 
     }
 
+    public function registerHouse()
+    {
+        $sql = $this->db->prepare("INSERT INTO Hus(Owner, Address, RegHouse, HeatSensor, HumidSensor, GasSensor) VALUES(:owner, :address, :reghouse, )");
+
+        $sql->bindParam(':Owner', $_POST['owner']);
+        $sql->bindParam(':Address', $_POST['address']);
+        $sql->bindParam(':RegHouse', $_POST['reghouse']);
+        $sql->bindParam(':RegZip', $_POST['regzip']);
+        /*
+        $sql->bindParam(':HeatSensor', $_POST['heatsensor']);
+        $sql->bindParam(':HumidSensor', $_POST['humidsensor']);
+        $sql->bindParam(':GasSensor', $_POST['gassensor']);
+        */
+
+        if(!empty($_POST['owner']) && !empty($_POST['address']) && !empty($_POST['reghouse']) && !empty($_POST['heatsensor']) && !empty($_POST['humidsensor']) && !empty($_POST['gassensor']))
+        {
+            $checkbox = $_POST['check'];
+            $chk="";
+
+            foreach($checkbox as $chk)
+            {
+                $results = $chk;
+            }
+
+
+            try
+            {
+                $sql->execute();
+            }
+            catch(\PDOException $e)
+            {
+                echo $e;
+            }
+
+        }
+    }
+
     public function Login()
     {
         if (isset($_POST['login'])) {
@@ -136,10 +173,10 @@ class User extends Model{
         }
     }
 
-        public function FetchUser()
+    public function FetchUser()
     {
         $sql = "SELECT Notandi.KT, Notandi.Fname, Notandi.Lname, Notandi.Phone, Notandi.Email, Notandi.Address,
-                Hus.houseID, Hus.Address, Hus.zipcode FROM Notandi INNER JOIN Hus ON Notandi.Address = Hus.Address";
+                Hus.houseID, Hus.Address FROM Notandi INNER JOIN Hus ON Notandi.Address = Hus.Address";
         $query = $this->db->prepare($sql);
         $query->execute();
 

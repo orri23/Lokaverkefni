@@ -13,19 +13,23 @@
  */
 
 namespace Mini\Controller;
-
+                                                    
 use Mini\Model\Data;
+use Mini\Model\User;
 
 class DataController
 {
     public function index()
     {
-        // Instance new Model (Song)
+        //Initializing user class for session check
+        $User = new User();
+        $User->SessionCheck();
+
+        //Initializing data class for fetching data into table
         $Data = new Data();
-        // getting all songs and amount of songs
         $datas = $Data->getAllData();
         $Data->insertAllData();
-        // load views. within the views we can echo out $songs and $amount_of_songs easily
+
         require APP . 'view/_templates/header.php';
         require APP . 'view/data/data.php';
         require APP . 'view/_templates/footer.php';

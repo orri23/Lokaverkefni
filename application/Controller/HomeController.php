@@ -11,6 +11,9 @@
 
 namespace Mini\Controller;
 
+use Mini\Model\User;
+
+
 class HomeController
 {
     /**
@@ -19,6 +22,8 @@ class HomeController
      */
     public function index()
     {
+        $User = new User();
+        $User->SessionCheck();
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/index.php';

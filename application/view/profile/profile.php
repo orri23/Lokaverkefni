@@ -1,10 +1,10 @@
 <?php
+/*
+$a = "login";
+session_id($a);*/
+if(empty($a)) session_start();
+echo "session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
 
-/*if (!$_SESSION['login'])
-{
-  echo 'asdasdasdasd';
-    //header("Location: http://138.68.150.56/Verkefni6/Login");
-}*/
 session_start();
 if ($_SESSION['login'] == true) {
   //header("Location: http://138.68.150.56/Verkefni6/Login");

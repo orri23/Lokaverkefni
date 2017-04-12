@@ -22,10 +22,10 @@ if (isset($_POST['signup']))
 <div class="container index">
     <div class="box">
         <form name="options" method="post">
-            <h3> Velkominn </h3> 
+            <h3> Velkomin(n) </h3> 
             <h3> Vinsamlegast skráðu þig inn á núverandi aðgang eða búðu til nýjan aðgang </h3>
-            <input name="login" type="submit" value="Login" class="pure-button pure-button-active">
-            <input name="signup" type="submit" value="Sign Up" class="pure-button pure-button-active">
+            <input name="login" type="submit" value="Innskráning" class="pure-button pure-button-active">
+            <input name="signup" type="submit" value="Skrá nýjan notenda" class="pure-button pure-button-active">
         </form>
     </div>
 </div>

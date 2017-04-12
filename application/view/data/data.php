@@ -1,10 +1,21 @@
+<?php
+
+session_start();
+if (session_id($a) == true) {
+    //header("Location: http://138.68.150.56/Verkefni6/Login");
+}
+else {
+    header("Location: http://138.68.150.56/Verkefni6/Login");
+}
+
+?>
 <div class="container">
     <div class="box">
         <form name="fetching" method="post">
             <input name="fetch" type="submit" value="Ná í gögn!" class="button">
         </form>
         <table>
-            <thead style="background-color: #ddd; font-weight: bold;">
+            <thead style="background-color: #13232f; font-weight: bold;">
             <tr>
                 <td>DataID</td>
                 <td>readCo</td>

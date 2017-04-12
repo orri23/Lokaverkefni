@@ -1,8 +1,16 @@
+<?php
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Lokaverkefni</title>
+    <title>RealTemperature</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,11 +27,20 @@
 
     <!-- navigation -->
     <div class="logo">
-    <h1 class="logo"> RealTemperature.com </h1>
+    <h1 class="logo"> RealTemperature </h1>
     </div>
     <div class="navigation">
-
-        <a href="<?php echo URL; ?>">heim</a>                              
-        <a href="<?php echo URL; ?>Data">gögn</a>        
+        <a href="<?php echo URL; ?>">heim</a>
+        <?php
+        //Þetta er í algjöru helvítis bulli
+        if($_SESSION['login']) {
+            $a = "login";
+            session_id($a);
+            if (session_id($a)) {
+                echo '<a href="data">data</a>';
+            }
+        }
+        ?>
+             
         
     </div>

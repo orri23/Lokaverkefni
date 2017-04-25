@@ -28,5 +28,9 @@ Lagaði til kóða í signup.php, header, footer, data og bætti við, íslenska
 24.4.2017 - Kristófer
 Vann í css á síðu og laga form.
 
+25.4.2017 - Kristófer
+Vann í css, kynnti mér gerð flottra logo-a, hvernig á að gera almennilegan footer svo það sé þægilegt fyrir notendann.
+Vann í skýrslu ROB. Hún er langt komin. 
+
 
  

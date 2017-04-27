@@ -13,7 +13,7 @@ use Mini\Core\Model;
 
 class User extends Model{
 
-    public function newUser($full_name_from_signup, $user_name_from_signup,$database_password_hash, $email_from_signup)
+  /*  public function newUser($full_name_from_signup, $user_name_from_signup,$database_password_hash, $email_from_signup)
     {
         //Undirbúið sql fyrir insert skipun
         $sth = $this->dbh->prepare("INSERT INTO user(username, name, password,email)
@@ -36,6 +36,57 @@ class User extends Model{
             return false;
         }
 
+
+    }*/
+
+    public function createUser()
+    {
+      $sth = $this->db->prepare("INSERT INTO Notandi(username, Fname, Lname, Password, KT, Phone, Email, Address)
+      VALUES (:username, :fname, :lname, :password, :KT, :Phone, :Email, :address)");
+
+      $sth->bindParam(':fname', $_POST['fname']);
+      $sth->bindParam(':lname', $_POST['lname']);
+      $sth->bindParam(':username', $_POST['uname']);
+      $sth->bindParam(':password', $_POST['psw']);
+      $sth->bindParam(':KT', $_POST['kt']);
+      $sth->bindParam(':Phone', $_POST['phone']);
+      $sth->bindParam(':Email', $_POST['email']);
+      $sth->bindParam(':address', $_POST['address']);
+
+      if (!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['uname'])
+    && !empty($_POST['psw'])) {
+
+        $sth->execute();
+      }
+
+
+    }
+
+    public function registerHouse()
+    {
+        if(isset($_POST['register'])) {
+
+            $sql = $this->db->prepare("INSERT INTO Hus(Owner, Address, RegHouse, HeatSensor, HumidSensor, GasSensor)
+        VALUES(:owner, :address, :reghouse, :heatsensor, :humidsensor, :gassensor)");
+
+            $sql->bindParam(':owner', $_POST['owner']);
+            $sql->bindParam(':address', $_POST['address']);
+            $sql->bindParam(':reghouse', $_POST['reghouse']);
+            $sql->bindParam(':regzip', $_POST['regzip']);
+            $sql->bindParam(':heatsensor', $_POST['heatsensor']);
+            $sql->bindParam(':humidsensor', $_POST['humidsensor']);
+            $sql->bindParam(':gassensor', $_POST['gassensor']);
+
+
+            if (!empty($_POST['owner']) && !empty($_POST['address']) && !empty($_POST['reghouse']) && !empty($_POST['heatsensor']) && !empty($_POST['humidsensor']) && !empty($_POST['gassensor'])) {
+                try {
+                    $sql->execute();
+                } catch (\PDOException $e) {
+                    echo $e;
+                }
+            }
+
+        }
     }
 
     public function Login()
@@ -82,9 +133,10 @@ class User extends Model{
                 echo $e->getMessage();
             }
             */
-
+            //var að testa eitthvað með þetta en ætla bara að geyma þetta þangað til seinna
             if (!empty($_POST['username']) && !empty($_POST['Password'])) {
-                $sql = 'SELECT * FROM Notandi WHERE username = ?';
+                //$uname = $_POST['username'];
+                $sql = "SELECT * FROM Notandi WHERE username = ?";
                 $query = $this->db->prepare($sql);
                 try {
                     $redirect = "http://138.68.150.56/Verkefni6/Profile";
@@ -111,16 +163,21 @@ class User extends Model{
         }
     }
 
-        public function FetchUser()
+    public function FetchUser()
     {
         $sql = "SELECT Notandi.KT, Notandi.Fname, Notandi.Lname, Notandi.Phone, Notandi.Email, Notandi.Address,
-                Hus.houseID, Hus.Address, Hus.zipcode FROM Notandi INNER JOIN Hus ON Notandi.Address = Hus.Address";
+                Hus.houseID, Hus.Address FROM Notandi INNER JOIN Hus ON Notandi.Address = Hus.Address";
         $query = $this->db->prepare($sql);
         $query->execute();
 
-        $_SESSION['login'] = true;
         $results = $query->fetchAll();
         return $results;
+    }
+
+    public function SessionCheck()
+    {
+
+      $_SESSION['login'] = true;
     }
 
 }

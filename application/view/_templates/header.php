@@ -1,8 +1,16 @@
+<?php
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Arduino</title>
+    <title>RealTemperature - Upplýsingar um hita, raka, alkahól -stig í húsum notenda </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,10 +27,22 @@
 
     <!-- navigation -->
     <div class="logo">
-    <h1 class="logo">ArduinoReader</h1>
+    <h1 class="logo"> RealTemperature </h1>
     </div>
     <div class="navigation">
+        <a href="<?php echo URL; ?>">Heim</a>
+        <?php
+        if($_SESSION['login']) {
+            $a = "login";
+            session_id($a);
+            if (session_id($a)) {
+                echo '<a href="data">Gögn</a>';
+            }
+        }
+        ?>
+        <a href="<?php echo URL; ?>">Register A House</a>
+        <a href="<?php echo URL; ?>" name="logout">Log Out</a>
 
-        <a href="<?php echo URL; ?>">home</a>
-        <a href="<?php echo URL; ?>Data">data</a>
+             
+        
     </div>

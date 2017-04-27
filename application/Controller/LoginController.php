@@ -13,6 +13,7 @@ class LoginController
         //Class initialized
         $User = new User();
         $User->Login();
+        $User->SessionCheck();
         require APP . 'view/_templates/header.php';
         require APP . 'view/loginsignup/login.php';
         require APP . 'view/_templates/footer.php';

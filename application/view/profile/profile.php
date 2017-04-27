@@ -1,17 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Eysteinn
- * Date: 30.3.2017
- * Time: 11:52
- */
 
+echo "session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
 
-/*if (!$_SESSION['login'])
-{
-  echo 'asdasdasdasd';
-    //header("Location: http://138.68.150.56/Verkefni6/Login");
-}*/
 session_start();
 if ($_SESSION['login'] == true) {
   //header("Location: http://138.68.150.56/Verkefni6/Login");
@@ -44,14 +34,14 @@ if (isset($_POST['logout']))
 
 <div class="container">
     <div class="box">
-        <h1>Your profile page</h1>
-        <p>Avatar</p>
+        <h1>Prófíll</h1>
+        <p>Mynd</p>
         <img src="public/img/avatar.jpg" class="avatar">
         <form name="upload" method="post">
         <input name="uploadAvatar" type="submit" value="Upload" class="pure-button">
         </form>
-        <h3>Personal info</h3>
-
+        
+        <h3> Persónu upplýsingar 1 </h3>
         <div class="pure-g">
             <?php foreach($results as $user) { ?>
                     <div class="pure-u-1-3 info"><p>Social security</p>
@@ -66,7 +56,7 @@ if (isset($_POST['logout']))
         </div>
             <?php } ?>
 
-        <h3>Contact info</h3>
+        <h3> Persónu upplýsingar 2 </h3>
         <div class="pure-g">
             <?php foreach($results as $user) { ?>
                     <div class="pure-u-1-3 info"><p>House ID</p>
@@ -81,7 +71,7 @@ if (isset($_POST['logout']))
         </div>
         <?php } ?>
 
-        <h3>House info</h3>
+        <h3>Upplýsingar á húsi </h3>
         <div class="pure-g">
             <?php foreach($results as $user) { ?>
             <div class="pure-u-1-3 info"><p>House ID</p>

@@ -20,7 +20,9 @@ class ProfileController
         //User Class initialized
 
         $user = new User();
+
         $results = $user->FetchUser();
+        $user->SessionCheck();
 
 
         require APP . 'view/_templates/header.php';

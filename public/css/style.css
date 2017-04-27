@@ -51,10 +51,17 @@ input {
     color: #fff;
 }
 .container {
+<<<<<<< HEAD
     width: 550px;
     margin: auto;
     border: 3px solid #ffffff;
     border-radius: 55px;
+=======
+    width: 500px;
+    margin: auto;
+    border: 3px solid #ffffff;
+    border-radius: 65px; 
+>>>>>>> 4ae96d5a65718358b69e7855debf66153836fc50
     margin-top: 3.2em;
 
 }
@@ -92,6 +99,10 @@ input {
     padding: 4px 10px;
 }
 .container .box {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 4ae96d5a65718358b69e7855debf66153836fc50
     padding-top: 10px;
     padding-bottom: 15px;
     text-align: center;

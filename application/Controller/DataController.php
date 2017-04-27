@@ -13,7 +13,7 @@
  */
 
 namespace Mini\Controller;
-
+                                                    
 use Mini\Model\Data;
 use Mini\Model\User;
 

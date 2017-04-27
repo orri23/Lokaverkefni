@@ -13,7 +13,7 @@
  */
 
 namespace Mini\Controller;
-                                                    
+
 use Mini\Model\Data;
 use Mini\Model\User;
 
@@ -24,6 +24,7 @@ class DataController
         //Initializing user class for session check
         $User = new User();
         $User->SessionCheck();
+        $User->SessionStart();
 
         //Initializing data class for fetching data into table
         $Data = new Data();

@@ -1,7 +1,30 @@
 <?php
+function is_session_started()
+{
+    if ( php_sapi_name() !== 'cli' ) {
+        if ( version_compare(phpversion(), '5.4.0', '>=') ) {
+            return session_status() === PHP_SESSION_ACTIVE ? TRUE : FALSE;
+        } else {
+            return session_id() === '' ? FALSE : TRUE;
+        }
+    }
+    return FALSE;
+}
 
+if (isset($_POST['logout']))
+{
+    //Invalidating the session cookie
+    $_SESSION = [];
+    if(isset($_COOKIE[session_name()]))
+    {
+        setcookie(session_name(), '', time()-86400, '/');
+    }
+    //Ending session and redirecting
+    session_destroy();
 
-
+    header('Location: http://138.68.150.56/Verkefni6/');
+    exit;
+}
 
 ?>
 
@@ -30,19 +53,19 @@
     <h1 class="logo"> RealTemperature </h1>
     </div>
     <div class="navigation">
-        <a href="<?php echo URL; ?>">Heim</a>
         <?php
-        if($_SESSION['login']) {
-            $a = "login";
-            session_id($a);
-            if (session_id($a)) {
-                echo '<a href="data">Gögn</a>';
-            }
+        if(is_session_started() === TRUE)
+        {
+            echo '<a href="data">Gögn</a>';
+            echo '<a href="registration">Register a house</a>';
+            echo '<a href="profile">Profile</a>';
+            echo '<a href="home" method="post" name="logout">Log Out</a>';
         }
-        ?>
-        <a href="<?php echo URL; ?>">Register A House</a>
-        <a href="<?php echo URL; ?>" name="logout">Log Out</a>
+        else
+        {
 
-             
+        }
+
+        ?>
         
     </div>

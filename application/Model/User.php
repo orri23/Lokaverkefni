@@ -64,7 +64,6 @@ class User extends Model{
 
     public function registerHouse()
     {
-<<<<<<< HEAD
         if(isset($_POST['register'])) {
 
             $sql = $this->db->prepare("INSERT INTO Hus(Owner, Address, RegHouse, HeatSensor, HumidSensor, GasSensor)
@@ -85,38 +84,6 @@ class User extends Model{
                 } catch (\PDOException $e) {
                     echo $e;
                 }
-=======
-        $sql = $this->db->prepare("INSERT INTO Hus(Owner, Address, RegHouse, HeatSensor, HumidSensor, GasSensor) VALUES(:owner, :address, :reghouse, )");
-
-        $sql->bindParam(':Owner', $_POST['owner']);
-        $sql->bindParam(':Address', $_POST['address']);
-        $sql->bindParam(':RegHouse', $_POST['reghouse']);
-        $sql->bindParam(':RegZip', $_POST['regzip']);
-        /*
-        $sql->bindParam(':HeatSensor', $_POST['heatsensor']);
-        $sql->bindParam(':HumidSensor', $_POST['humidsensor']);
-        $sql->bindParam(':GasSensor', $_POST['gassensor']);
-        */
-
-        if(!empty($_POST['owner']) && !empty($_POST['address']) && !empty($_POST['reghouse']) && !empty($_POST['heatsensor']) && !empty($_POST['humidsensor']) && !empty($_POST['gassensor']))
-        {
-            $checkbox = $_POST['check'];
-            $chk="";
-
-            foreach($checkbox as $chk)
-            {
-                $results = $chk;
-            }
-
-
-            try
-            {
-                $sql->execute();
-            }
-            catch(\PDOException $e)
-            {
-                echo $e;
->>>>>>> 4ae96d5a65718358b69e7855debf66153836fc50
             }
 
         }
@@ -175,7 +142,9 @@ class User extends Model{
                     $redirect = "http://138.68.150.56/Verkefni6/Profile";
                     $query->execute(array($_POST['username']));
                     $data = $query->fetchAll(PDO::FETCH_ASSOC);
-                    $firstRow = $data[0];
+                    if(!empty($data)){
+                        $firstRow = $data[0];
+                    }
                     if ($_POST['Password'] == $firstRow['Password']) {
                         session_start();
                         $_SESSION['login'] = true;
@@ -207,10 +176,22 @@ class User extends Model{
         return $results;
     }
 
+    public function SessionStart()
+    {
+        session_start();
+    }
+
     public function SessionCheck()
     {
-
-      $_SESSION['login'] = true;
+        //If session is started TRUE/FALSE
+        if ( php_sapi_name() !== 'cli' ) {
+            if ( version_compare(phpversion(), '5.4.0', '>=') ) {
+                return session_status() === PHP_SESSION_ACTIVE ? TRUE : FALSE;
+            } else {
+                return session_id() === '' ? FALSE : TRUE;
+            }
+        }
+        return FALSE;
     }
 
 }

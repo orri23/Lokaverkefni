@@ -23,6 +23,7 @@ class RegistrationController
         $results = $User->FetchUser();
         $User->registerHouse();
         $User->SessionCheck();
+        $User->SessionStart();
 
 
         require APP . 'view/_templates/header.php';

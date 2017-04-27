@@ -6,7 +6,7 @@
         <H1> Skrásíða </H1>
         <form name="signup" method="post">
             <label><b>Kennitala:</b></label>
-            <input type="text" placeholder="" name="kt" required><br>           
+            <input type="text" placeholder="" max-length="10" name="kt" required><br>
             <label><b>Nafn:</b></label>
             <input type="text" placeholder="" name="fname" required><br>          
             <label><b>Eftirnafn:</b></label>

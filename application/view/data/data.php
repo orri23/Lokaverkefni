@@ -1,34 +1,18 @@
 <?php
 
-session_start();
-<<<<<<< HEAD
 if ($_SESSION['login']) {
     //header("Location: http://138.68.150.56/Verkefni6/Login");
 } else {
-=======
-if (session_id($a) == true) {
-    //header("Location: http://138.68.150.56/Verkefni6/Login");
-}
-else {
->>>>>>> 4ae96d5a65718358b69e7855debf66153836fc50
     header("Location: http://138.68.150.56/Verkefni6/Login");
 }
 
 ?>
 <div class="container">
     <div class="box">
-<<<<<<< HEAD
         <!-- <input name="fetch" type="submit" value="Ná í gögn!" class="button"> -->
         <table class="pure-table pure-table-bordered">
             <h3> Temperature values </h3>
             <thead style="font-weight: bold;">
-=======
-        <form name="fetching" method="post">
-            <input name="fetch" type="submit" value="Ná í gögn!" class="button">
-        </form>
-        <table>
-            <thead style="background-color: #13232f; font-weight: bold;">
->>>>>>> 4ae96d5a65718358b69e7855debf66153836fc50
             <tr>
                 <td>DataID</td>
                 <td name="data">readCo</td>

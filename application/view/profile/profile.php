@@ -1,17 +1,6 @@
 <?php
-<<<<<<< HEAD
 
-echo "session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
-
-=======
-/*
-$a = "login";
-session_id($a);*/
-if(empty($a)) session_start();
-echo "session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
-
->>>>>>> 4ae96d5a65718358b69e7855debf66153836fc50
-session_start();
+//echo "session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
 if ($_SESSION['login'] == true) {
   //header("Location: http://138.68.150.56/Verkefni6/Login");
 }

@@ -24,10 +24,6 @@ class SignupController
         $User->createUser();
         $User->SessionCheck();
 
-<<<<<<< HEAD
-=======
-        // load views. within the views we can echo out $songs and $amount_of_songs easily
->>>>>>> 4ae96d5a65718358b69e7855debf66153836fc50
         require APP . 'view/_templates/header.php';
         require APP . 'view/loginsignup/signup.php';
         require APP . 'view/_templates/footer.php';

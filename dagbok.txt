@@ -37,7 +37,7 @@ Er að leggja lokahönd á skýrslu verkefnis í ROB og afkastaði miklu. Ekki m
 
 
 28.4.2017 - Kristófer
-Bjó til footer (Hann á að innihalda "About us", hvernig á að hafa samband ef eitthvað er að, og hvernig við hyggjum að halda persónuupplýsingum öruggum)
+Bjó til footer (Hann á að innihalda "About us", hvernig á að hafa samband ef eitthvað er að, og hvernig við hyggjum að halda persónuupplýsingum öruggum) og svo ratvísi á síðunni (notandi á að geta farið á home síðuna úr footer).
 
 
 

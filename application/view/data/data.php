@@ -7,8 +7,8 @@ if ($_SESSION['login']) {
 }
 
 ?>
-<div class="container">
-    <div class="box">
+<div class="splash-container">
+    <div class="splash">
         <!-- <input name="fetch" type="submit" value="Ná í gögn!" class="button"> -->
         <table class="pure-table pure-table-bordered">
             <h3> Temperature values </h3>
@@ -38,7 +38,5 @@ if ($_SESSION['login']) {
             <?php } ?>
             </tbody>
         </table>
-
-
     </div>
 </div>

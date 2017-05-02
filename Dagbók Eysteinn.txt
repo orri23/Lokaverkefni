@@ -16,5 +16,14 @@ Unnið að því að fá alla skynjara í lag án árangurs
 Tók Arduino tölvuna heim og vann í þessu, allir skynjarar fengnir í lag og þeir senda gögn á database auk þess að birta öll gögnin rétt
 ásamt að sýna current date á færslu.
 
+27.4.2017 
+Vann heima í því að laga session vandamál. Navigation hnappar eru bara sýnilegir núna ef viðkomandi er loggaður inn.
+Skrifaði einnig fall sem gefur TRUE/FALSE gildi ef session er í gangi eða ekki. Auk þess skrifaði ég tvær validation skriftur fyrir signup og login formið.
+
+28.4.2017
+Vann heima, setti upp layout fyrir síðuna sem gerir síðuna í kjölfarið mun meira responsive. Kláraði að laga örfáa session bögga, logout takkinn virkar rétt núna.
+Í framhaldinu kláraði ég allt validation fyrir formin, síðan ætti að vera 100% safe frá injections. 
+
+
 
 

@@ -18,9 +18,9 @@ if(isset($_POST['signup']))
     else
     {
         $kt = test_input($_POST['kt']);
-        if (!preg_match('/^[1-9][0-9]{9}$/', $kt))
+        if (!preg_match('/^[0-9]{10}$/', $kt))
         {
-            $ktError = "Numerical values only allowed.";
+            $ktError = "The social security number must be 10 digits.";
         }
     }
 
@@ -51,13 +51,13 @@ if(isset($_POST['signup']))
 
     }
 
-    if(empty($_POST['username']))
+    if(empty($_POST['uname']))
     {
         $userError = "* You must fill out this field.";
     }
     else
     {
-        $name = test_input($_POST['username']);
+        $name = test_input($_POST['uname']);
         if (!preg_match("/^[a-zA-Z ]*$/", $name))
         {
             $userError = "* Only letters and white space allowed.";
@@ -79,13 +79,18 @@ if(isset($_POST['signup']))
 
     if(empty($_POST['Password']))
     {
-        $passwordError = "* You must enter a valid password";
+        $passwordError = "* You must fill out this field.";
     }
     else {
         $password = test_input($_POST['Password']);
-        if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $password)) {
-            $passwordError = "* You must enter a valid password";
+        if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{6,18}$/', $password)) {
+            $passwordError = "* Legal characters only! (6-18 letters)";
         }
+    }
+
+    if(empty($_POST['address']))
+    {
+        $addressError = "* You must fill out this field.";
     }
 }
 

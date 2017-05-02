@@ -13,53 +13,27 @@ use Mini\Core\Model;
 
 class User extends Model{
 
-  /*  public function newUser($full_name_from_signup, $user_name_from_signup,$database_password_hash, $email_from_signup)
-    {
-        //Undirbúið sql fyrir insert skipun
-        $sth = $this->dbh->prepare("INSERT INTO user(username, name, password,email)
-						VALUES (:username, :fname, :password, :email)");
-
-        //Placeholderar og breytur bundnar saman
-        $sth->bindParam(':fname', $full_name_from_signup);
-        $sth->bindParam(':username', $user_name_from_signup);
-        $sth->bindParam(':password', $database_password_hash);
-        //$sth->bindParam(':password', $user_password_from_signup);
-        $sth->bindParam(':email', $email_from_signup);
-
-        try{
-            $sth->execute();
-            return true;
-        }
-        catch(PDOException $e)
-        {
-            echo "Error: " . $e->getMessage();
-            return false;
-        }
-
-
-    }*/
-
     public function createUser()
     {
-      $sth = $this->db->prepare("INSERT INTO Notandi(username, Fname, Lname, Password, KT, Phone, Email, Address)
-      VALUES (:username, :fname, :lname, :password, :KT, :Phone, :Email, :address)");
+        $sth = $this->db->prepare("INSERT INTO Notandi(username, Fname, Lname, Password, KT, Phone, Email, Address, dateJoined)
+      VALUES (:uname, :fname, :lname, :Password, :kt, :Phone, :Email, :address, CURRENT_TIMESTAMP )");
 
-      $sth->bindParam(':fname', $_POST['fname']);
-      $sth->bindParam(':lname', $_POST['lname']);
-      $sth->bindParam(':username', $_POST['uname']);
-      $sth->bindParam(':password', $_POST['psw']);
-      $sth->bindParam(':KT', $_POST['kt']);
-      $sth->bindParam(':Phone', $_POST['phone']);
-      $sth->bindParam(':Email', $_POST['email']);
-      $sth->bindParam(':address', $_POST['address']);
+        $sth->bindParam(':fname', $_POST['fname']);
+        $sth->bindParam(':lname', $_POST['lname']);
+        $sth->bindParam(':uname', $_POST['uname']);
+        $sth->bindParam(':Password', $_POST['Password']);
+        $sth->bindParam(':kt', $_POST['kt']);
+        $sth->bindParam(':Phone', $_POST['phone']);
+        $sth->bindParam(':Email', $_POST['email']);
+        $sth->bindParam(':address', $_POST['address']);
 
-      if (!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['uname'])
-    && !empty($_POST['psw'])) {
-
-        $sth->execute();
-      }
-
-
+        if(!empty($_POST['kt']) && !empty($_POST['fname'] && !empty($_POST['lname']) && !empty($_POST['uname']) && !empty($_POST['email']) && !empty($_POST['Password']) && !empty($_POST['address']))) {
+            try {
+                $sth->execute();
+            } catch (\PDOException $e) {
+                echo $e;
+            }
+        }
     }
 
     public function registerHouse()
@@ -134,13 +108,13 @@ class User extends Model{
             }
             */
             //var að testa eitthvað með þetta en ætla bara að geyma þetta þangað til seinna
-            if (!empty($_POST['username']) && !empty($_POST['Password'])) {
+            if (!empty($_POST['uname']) && !empty($_POST['Password'])) {
                 //$uname = $_POST['username'];
                 $sql = "SELECT * FROM Notandi WHERE username = ?";
                 $query = $this->db->prepare($sql);
                 try {
                     $redirect = "http://138.68.150.56/Verkefni6/Profile";
-                    $query->execute(array($_POST['username']));
+                    $query->execute(array($_POST['uname']));
                     $data = $query->fetchAll(PDO::FETCH_ASSOC);
                     if(!empty($data)){
                         $firstRow = $data[0];

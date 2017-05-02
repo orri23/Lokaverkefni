@@ -1,6 +1,6 @@
 
-    <div class="footer">
-        
+    <div class="footer l-box is-center">
+        <p>2017</p>
     </div>
 
     <!-- jQuery, loaded in the recommended protocol-less way -->

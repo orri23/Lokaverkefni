@@ -1,4 +1,6 @@
 <?php
+
+
 function is_session_started()
 {
     if ( php_sapi_name() !== 'cli' ) {
@@ -33,7 +35,7 @@ if (isset($_POST['logout']))
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>RealTemperature - Upplýsingar um hita, raka, alkahól -stig í húsum notenda </title>
+    <title>RealTemperature</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -43,29 +45,36 @@ if (isset($_POST['logout']))
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link href="<?php echo URL; ?>css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!-- logo, check the CSS file for more info how the logo "image" is shown -->    
 
     <!-- navigation -->
-    <div class="logo">
-    <h1 class="logo"> RealTemperature </h1>
-    </div>
-    <div class="navigation">
-        <?php
-        if(is_session_started() === TRUE)
-        {
-            echo '<a href="data">Gögn</a>';
-            echo '<a href="registration">Register a house</a>';
-            echo '<a href="profile">Profile</a>';
-            echo '<a href="home" method="post" name="logout">Log Out</a>';
-        }
-        else
-        {
 
-        }
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="home">RealTemp</a>
 
-        ?>
-        
+            <ul class="pure-menu-list">
+                <?php
+                if (is_session_started() === TRUE) {
+                    echo '<li class="pure-menu-item"><a href="data" class="pure-menu-link">Your sensors</a></li>';
+                    echo '<li class="pure-menu-item"><a href="registration" class="pure-menu-link">Register a house</a></li>';
+                    echo '<li class="pure-menu-item"><a href="profile" class="pure-menu-link">Account management</a></li>';
+                    echo '<li class="pure-menu-item"><a href="logout" class="pure-menu-link">Log out</a></li>';
+
+                } else {
+
+                    echo '<li class="pure-menu-item"><a href="home" class="pure-menu-link">Home</a></li>';
+                    echo '<li class="pure-menu-item"><a href="login" class="pure-menu-link">Log in</a></li>';
+                    echo '<li class="pure-menu-item"><a href="signup" class="pure-menu-link">Sign Up</a></li>';
+
+                }
+                ?>
+            </ul>
+        </div>
     </div>
+
+

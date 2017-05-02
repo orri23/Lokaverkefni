@@ -6,13 +6,13 @@ $passwordError = "";
 
 if(isset($_POST['login']))
 {
-    if(empty($_POST['username']))
+    if(empty($_POST['uname']))
     {
         $userError = "* You must enter a valid username";
     }
     else
     {
-        $name = test_input($_POST['username']);
+        $name = test_input($_POST['uname']);
         if (!preg_match("/^[a-zA-Z ]*$/", $name))
         {
             $userError = "* Only letters and white space allowed.";
@@ -24,7 +24,7 @@ if(isset($_POST['login']))
         $passwordError = "* You must enter a valid password";
     }
     else {
-        $password = test_input($_POST['Password']);
+        $password = test_input($_POST['uname']);
         if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $password)) {
             $passwordError = "* You must enter a valid password";
         }

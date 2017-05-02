@@ -30,16 +30,10 @@ if (isset($_POST['logout']))
 
 <!--USER PROFILE-->
 
-<div class="container">
-    <div class="box">
-        <h1>Prófíll</h1>
-        <p>Mynd</p>
-        <img src="public/img/avatar.jpg" class="avatar">
-        <form name="upload" method="post">
-        <input name="uploadAvatar" type="submit" value="Upload" class="pure-button">
-        </form>
+<div class="splash-container">
+    <div class="splash">
         
-        <h3> Persónu upplýsingar 1 </h3>
+        <h3> User info </h3>
         <div class="pure-g">
             <?php foreach($results as $user) { ?>
                     <div class="pure-u-1-3 info"><p>Social security</p>
@@ -54,7 +48,6 @@ if (isset($_POST['logout']))
         </div>
             <?php } ?>
 
-        <h3> Persónu upplýsingar 2 </h3>
         <div class="pure-g">
             <?php foreach($results as $user) { ?>
                     <div class="pure-u-1-3 info"><p>House ID</p>
@@ -68,8 +61,9 @@ if (isset($_POST['logout']))
                     </div>
         </div>
         <?php } ?>
+        <br>
 
-        <h3>Upplýsingar á húsi </h3>
+        <h3>Registered house</h3>
         <div class="pure-g">
             <?php foreach($results as $user) { ?>
             <div class="pure-u-1-3 info"><p>House ID</p>
@@ -83,11 +77,6 @@ if (isset($_POST['logout']))
             </div>
         </div>
     <?php } ?>
-    </div>
-    <div class="box">
-        <form name="logout" method="post">
-            <input name="logout" type="submit" value="Log out" class="pure-button">
-        </form>
     </div>
 
 </div>

@@ -43,6 +43,11 @@ Bjó til footer (Hann á að innihalda "About us", hvernig á að hafa samband e
 Hélt áfram að vinna css á vefsíðu, bjó til logo, takka...
 Var 3 klukkutíma að vinna í skýrslu í ROB, vandamál með tex. 
 
+3.5.2017 - Kristófer
+Hélt áfram með css-á síðunni, minnka container þannig linkar (controllers) sem ég er að gera fyrir about us, contact us, og privacy policy í footer sjáist eitthvað á home page-inu, container-inn var gríða stór og fleira. 
+Síðan með sensor-gildin: efst á síðunni var elsta date-ið, sem sagt gildið sem kom fyrst, notandinn vill
+fá nýjasta date-ið þannig ég bætti við order by skipun sem gerði það að verkum að nýjasta gildið birtist efst.
+
 
 
  

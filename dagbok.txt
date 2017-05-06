@@ -50,7 +50,7 @@ fá nýjasta date-ið þannig ég bætti við order by skipun sem gerði það a
 
 5.5.2017 - Kristófer
 Vann í css, breyta litum á tökkum , bjó til nýjar síður (linkar að þeim, href) með controller fyrir Home, about us, contact us, privacy policy þessar síður geyma nokkuð mikilvægar upplýsingar. Tók mig dágóðan tíma að átta mig á því að cleara cache þar sem breytingarnar
-voru ekki að koma inn sem ég var að gera, frekar fúlt. 
+voru ekki að koma inn sem ég var að gera, frekar fúlt. Bætti við veðurstöð í footer, við hæfi á þessari síðu ;).
 
 
 

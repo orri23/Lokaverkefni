@@ -50,7 +50,17 @@ fá nýjasta date-ið þannig ég bætti við order by skipun sem gerði það a
 
 5.5.2017 - Kristófer
 Vann í css, breyta litum á tökkum , bjó til nýjar síður (linkar að þeim, href) með controller fyrir Home, about us, contact us, privacy policy þessar síður geyma nokkuð mikilvægar upplýsingar. Tók mig dágóðan tíma að átta mig á því að cleara cache þar sem breytingarnar
-voru ekki að koma inn sem ég var að gera, frekar fúlt. Bætti við veðurstöð í footer, við hæfi á þessari síðu ;) (setti það inní footer klasann sem er í index.php, aboutus.php, contact.php, privacy.php  og þar af leiðandi birtist bara í footer á þeim síðum, ekki login eða svoleiðis). Gerði neon logo fyrir cabout us síðuna með nice color scheme, báðir litir í 25%. 
+voru ekki að koma inn sem ég var að gera, frekar fúlt. Bætti við veðurstöð í footer, við hæfi á þessari síðu ;) (setti það inní footer klasann sem er í index.php, aboutus.php, contact.php, privacy.php  og þar af leiðandi birtist bara í footer á þeim síðum, ekki login eða svoleiðis). Gerði neon logo fyrir about us síðuna með nice color scheme, báðir litir í 25%. 
+
+6.5.2017 - Kristófer
+Eyddi 1 og hálfri klukkustund í að reyna finna út úr því að fá favicon til þess að virka (browser tab) en gékk ekki,
+var að kynna mér það og reyna að kunna að setja það inn. Reyndi þó.
+Vann í contact síðunni þar sem notandinn sendir inn einhver skilaboð ef eitthvað bjátar á. 
+Kláraði textann fyrir about us síðuna, kláraði logo-ið þar líka. Línkar á síðurnar eru í footer ásamt veðurstöð sem ég bætti inn,
+þurfti research í það, maður lærir alltaf eitthvað nýtt. 
+Hélt áfram með css, breyta hover litum og svona, gerði flottan border á heimasíðu logo-ið, margt smátt um allt, staðsetningu linkana og textanns í footernum.  
+Tók fyrri footer út líka, síðan er að verða ágætlega falleg núna.  
+
 
 
 

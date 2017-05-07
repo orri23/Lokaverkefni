@@ -20,10 +20,10 @@ class RegistrationController
         //User Class initialized
 
         $User = new User();
-        $results = $User->FetchUser();
         $User->registerHouse();
-        $User->SessionCheck();
         $User->SessionStart();
+        $User->SessionCheck();
+
 
 
         require APP . 'view/_templates/header.php';

@@ -1,8 +1,5 @@
 <?php
 
-//Eysteinn Orri Sigurðsson
-//Klasi sem sér um alla gagnavinnslu sem tengist Arduino.
-
 namespace Mini\Model;
 
 use Mini\Core\Model;
@@ -10,10 +7,9 @@ use Mini\Core\Model;
 class Data extends Model
 {
 
-    //Sótt öll gildi af database
     public function getAllData()
     {
-        $sql = "SELECT dataID, readCO, readAlc, readTemp, readHumid, readFarenheit, readDate FROM arduino";
+        $sql = "SELECT dataID, readCO, readAlc, readTemp, readHumid, readFarenheit, readDate FROM arduino ORDER BY readDate DESC";
         $query = $this->db->prepare($sql);
         $query->execute();
 

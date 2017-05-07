@@ -5,7 +5,7 @@
 
 <div class="content">
     <h2 class="content-head is-center">How to contact us? </h2>
-    <h4 class="is-center"> Feel free to leave us a message if there are any problems and we'll get right back to you </h4>
+    <h4 class="is-center"> Feel free to leave us a message if any problems occur and we'll get right back to you </h4>
 
     <div class="l-box-lrg pure-g">
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">

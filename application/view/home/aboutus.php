@@ -12,14 +12,18 @@
     <div class="splash">
         <h1 class="splash-head">About RealTemp</h1>
        
-         <h4 class="is-center"> We are students of Technical College......... </h4>
+         <h4 class="is-center"> We are two students of the Technical College in Reykjavík and this very website is our
+         3 week project which is due date in the end of the semester. The idea for this type of website sprung up from a Robotics 
+        class we were both involved in - in this Robotics course we are set off to connect sensors which produce values.
+        Therefore we figured that for this 3 week project, we should try and publish these values on a website. The values consist
+        of temperature, humidity, Co2 and alcohol. Simply put, the core idea for the user is to be able to view the temperature,
+        humidity, Co2 and alcohol in your summer house, home, company etc. All you need to do is to sign up, log on your account on the website from wherever
+        you please and view the values </h4>
         
     </div>
 </div>
 
-<div class="content">
-    <div class="ribbon l-box-lrg pure-g">
-        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+
         
 
 
@@ -65,6 +69,7 @@
 
 h4 {
     text-transform: none;
+    font-size: 14.5px;
 }
    
      

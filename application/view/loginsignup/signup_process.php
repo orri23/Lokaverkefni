@@ -51,13 +51,13 @@ if(isset($_POST['signup']))
 
     }
 
-    if(empty($_POST['uname']))
+    if(empty($_POST['username']))
     {
         $userError = "* You must fill out this field.";
     }
     else
     {
-        $name = test_input($_POST['uname']);
+        $name = test_input($_POST['username']);
         if (!preg_match("/^[a-zA-Z ]*$/", $name))
         {
             $userError = "* Only letters and white space allowed.";

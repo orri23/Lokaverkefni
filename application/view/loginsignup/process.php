@@ -1,25 +1,42 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Eysteinn
- * Date: 29.3.2017
- * Time: 19:07
- */
 
-foreach ($_POST as $key => $value) {
+//Login validation
+$userError = "";
+$passwordError = "";
 
-//Trimmar úr auð bil
-    $temp = is_array($value) ? $value : trim($value);
-
-//Ef reitnir eru tómir, bæta við í $missing array
-    if (empty($temp) && in_array($key, $required)) {
-        $missing[] = $key;
-//Ef svo er tæmir reitinn.
-        ${$key} = '';
-    } //Athugað ef gögn séu að koma frá öðrum input textareitum.
-    elseif (in_array($key, $expected)) {
-        ${$key} = $temp;
+if(isset($_POST['login']))
+{
+    if(empty($_POST['username']))
+    {
+        $userError = "* You must enter a valid username";
     }
+    else
+    {
+        $name = test_input($_POST['username']);
+        if (!preg_match("/^[a-zA-Z ]*$/", $name))
+        {
+            $userError = "* Only letters and white space allowed.";
+        }
+    }
+
+    if(empty($_POST['Password']))
+    {
+        $passwordError = "* You must enter a valid password";
+    }
+    else {
+        $password = test_input($_POST['Password']);
+        if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $password)) {
+            $passwordError = "* You must enter a valid password";
+        }
+    }
+}
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 
 ?>

@@ -8,8 +8,8 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 byte mac[] = { 0x90, 0xA2, 0xDA, 0x0F, 0x2A, 0x8D };
-byte ip[] = { 192, 168, 1, 103};
-byte gw[] = {192,168,1,1};
+byte ip[] = { 10, 220, 216, 49};
+byte gw[] = {10,220,216,1};
 byte subnet[] = { 255, 255, 255, 0 };
 byte server[] = { 138, 68, 150, 56  }; // Server IP
 
@@ -32,7 +32,6 @@ void loop() {
 
   int mq3_analogPin = A1;
   int mq3_value = analogRead(mq3_analogPin);
-  
   float h = dht.readHumidity();
   float t = dht.readTemperature();
   float f = dht.readTemperature(true);
@@ -42,7 +41,7 @@ void loop() {
     return;
   }
   else {
-    senddata(h, t, f, mq7_analogPin, mq3_analogPin);
+    senddata(h, t, mq7_analogPin);
   }
 
   
@@ -64,32 +63,27 @@ void loop() {
   Serial.print(" *C ");
   Serial.print(hif);
   Serial.println(" *F");
-  Serial.print('\n');
+
   Serial.print(mq7_value);
-  Serial.print('\n');
-  Serial.print(mq3_value);
-  Serial.print('\n');
+
 }
 
-void senddata(float h, float t, float f, int mq7_value, int mq3_value)
-{  
+void senddata(float h, float t, int mq7_value)
+{
+  Serial.println();
   Serial.println("TEST");
   delay(3000);
 
   if (client.connect(server, 80)) {
   Serial.println("Connected");
-  client.print("GET /Verkefni6/data?data=");
-  client.print(mq3_value);
-  client.print("&data2=");  
-  client.print(mq7_value);  
-  client.print("&data3=");
+  client.print("GET /Verkefni6/public/index.php?data=");
   client.print(h);
-  client.print("&data4=");
-  client.print(t);
-  client.print("&data5=");
-  client.print(f);
+  client.print("&data2=");  
+  client.print(t);  
+  client.print("&data3=");
+  client.print(mq7_value );
   client.println(" HTTP/1.1");
-  client.println("Host: 138, 68, 150, 56 ");
+  client.println("Host: 10.220.216.49");
   client.println("Connection: close");
   client.println();
   Serial.println();
@@ -102,16 +96,15 @@ void senddata(float h, float t, float f, int mq7_value, int mq3_value)
 
 else
 {
-Serial.println("Connection unsuccessful");
+Serial.println("Connection unsuccesful");
 }
-
 //}
  //stop client
  client.stop();
  while(client.status() != 0)
 {
-  delay(60000);
+  delay(5);
 }
-
+  
 }
 

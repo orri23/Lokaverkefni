@@ -39,31 +39,6 @@ Er að leggja lokahönd á skýrslu verkefnis í ROB og afkastaði miklu. Ekki m
 28.4.2017 - Kristófer
 Bjó til footer (Hann á að innihalda "About us", hvernig á að hafa samband ef eitthvað er að, og hvernig við hyggjum að halda persónuupplýsingum öruggum) og svo ratvísi á síðunni (notandi á að geta farið á home síðuna úr footer).
 
-2.5.2017 - Kristófer
-Hélt áfram að vinna css á vefsíðu, bjó til logo, takka...
-Var 3 klukkutíma að vinna í skýrslu í ROB, vandamál með tex. 
-
-3.5.2017 - Kristófer
-Hélt áfram með css-á síðunni, minnka container þannig linkar (controllers) sem ég er að gera fyrir about us, contact us, og privacy policy í footer sjáist eitthvað á home page-inu, container-inn var gríða stór og fleira. 
-Síðan með sensor-gildin: efst á síðunni var elsta date-ið, sem sagt gildið sem kom fyrst, notandinn vill
-fá nýjasta date-ið þannig ég bætti við order by skipun sem gerði það að verkum að nýjasta gildið birtist efst.
-
-5.5.2017 - Kristófer
-Vann í css, breyta litum á tökkum , bjó til nýjar síður (linkar að þeim, href) með controller fyrir Home, about us, contact us, privacy policy þessar síður geyma nokkuð mikilvægar upplýsingar. Tók mig dágóðan tíma að átta mig á því að cleara cache þar sem breytingarnar
-voru ekki að koma inn sem ég var að gera, frekar fúlt. Bætti við veðurstöð í footer, við hæfi á þessari síðu ;) (setti það inní footer klasann sem er í index.php, aboutus.php, contact.php, privacy.php  og þar af leiðandi birtist bara í footer á þeim síðum, ekki login eða svoleiðis). Gerði neon logo fyrir about us síðuna með nice color scheme, báðir litir í 25%. 
-
-6.5.2017 - Kristófer
-Eyddi 1 og hálfri klukkustund í að reyna finna út úr því að fá favicon til þess að virka (browser tab) en gékk ekki,
-var að kynna mér það og reyna að kunna að setja það inn. Reyndi þó.
-Vann í contact síðunni þar sem notandinn sendir inn einhver skilaboð ef eitthvað bjátar á. 
-Kláraði textann fyrir about us síðuna, kláraði logo-ið þar líka. Línkar á síðurnar eru í footer ásamt veðurstöð sem ég bætti inn,
-þurfti research í það, maður lærir alltaf eitthvað nýtt. 
-Hélt áfram með css, breyta hover litum og svona, gerði flottan border á heimasíðu logo-ið, margt smátt um allt, staðsetningu linkana og textanns í footernum.  
-Tók fyrri footer út líka sem var fyrir, síðan er að verða ágætlega falleg núna.  
-lagaði lit á backgroundinum á hoverinu á hrefunum(linkunum) í footer, það tók mig smá tíma að fatta að ég hafði ekkert tag fyrir li href í css skjalinu - bjó þar af leiðandi til nýtt: (.footer a:hover { ) og setti bara background-color: transparent; og það er fínt núna.
-
-
-
 
 
  

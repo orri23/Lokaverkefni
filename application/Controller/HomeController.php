@@ -24,6 +24,9 @@ class HomeController
     {
         $User = new User();
         $User->SessionCheck();
+        $User->Login();
+        $User->FetchUser();
+
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/index.php';

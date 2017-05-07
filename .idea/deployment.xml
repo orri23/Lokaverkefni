@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Server">
+  <component name="PublishConfigData" serverName="Host">
     <serverData>
+      <paths name="Host">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Server">
         <serverdata>
           <mappings>
-            <mapping deploy="/Verkefni6" local="$PROJECT_DIR$" web="Verkefni6" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

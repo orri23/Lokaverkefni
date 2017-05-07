@@ -1,73 +1,62 @@
 <?php
 
-
-//echo "session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
 if ($_SESSION['login'] == true) {
 
 } else {
     header("Location: http://138.68.150.56/Verkefni6/Login");
 }
 
-
-if (isset($_POST['logout'])) {
-    //Invalidating the session cookie
-    $_SESSION = [];
-    if (isset($_COOKIE[session_name()])) {
-        setcookie(session_name(), '', time() - 86400, '/');
-    }
-    //Ending session and redirecting
-    session_destroy();
-
-    header('Location: http://138.68.150.56/Verkefni6/');
-    exit;
-}
 ?>
 
 <div class="content">
-    <div class="pure-g">
-        <div class="l-box-lrg pure-u-1">
-            <?php foreach ($results as $user) { ?>
-            <H3>Register a house
-                for: <?php if (isset($user->Fname)) echo "<b>" . htmlspecialchars($user->Fname, ENT_QUOTES, 'UTF-8') . "</b>"; ?></H3>
-            <form class="pure-form pure-form-stacked" name="register" method="post">
+    <div class="l-box-lrg">
+        <H3 class="is-center">House Registration </H3>
+        <div class="l-box-lrg pure-u-1-2">
+            <form class="pure-form" name="register" method="post">
                 <fieldset>
-                    <legend>Please insert your information</legend>
+                    <legend>Please insert your information.</legend>
                     <div class="pure-g">
                         <div class="pure-u-1">
                             <label><b>Registered owner</b></label>
-                            <input class="input" type="text" placeholder="Full name" name="owner" required>
+                            <input class="input" type="text" placeholder="Full name" name="owner">
                         </div>
 
                         <div class="pure-u-1">
                             <label><b>Home address</b></label>
-                            <input class="input" type="text" placeholder="Home address" name="address" required>
+                            <input class="input" type="text" placeholder="Home address" name="address">
                         </div>
 
                         <div class="pure-u-1">
                             <label><b>Register address</b></label>
-                            <input class="input" type="text" placeholder="Register address" name="reghouse" required>
+                            <input class="input" type="text" placeholder="Register address" name="regaddress">
                         </div>
 
                         <div class="pure-u-1">
                             <label><b>Zip code</b></label>
-                            <input class="input" type="text" placeholder="Registered house ZIP" name=regzip" required>
+                            <input class="input" type="text" placeholder="Registered house ZIP" name="regzip">
                         </div>
                     </div>
-                    <div class="pure-u-1">
-                        <h3>Check in which sensors you would like to use</h3>
-                        <label><b>Heat Sensor?</b></label>
-                        <input class="input" type="checkbox" name="heatsensor" value="1">
-                        <label><b>Humidity sensor?</b></label>
-                        <input class="input" type="checkbox" name="humidsensor" value="1">
-                        <label><b>Gas sensor?</b></label>
-                        <input class="input" type="checkbox" name="gassensor" value="1">
 
-                        <button type="register" class="pure-button pure-button-primary">Register</button>
-                    </div>
+                </fieldset>
+
+
+            </form>
+        </div>
+
+        <div class="pure-u-1-2">
+            <legend>Check in which sensors you would like to use.</legend>
+            <label><b>Heat Sensor?</b></label>
+            <input class="input" type="checkbox" name="Sensor[]" value="Heat">
+            <label><b>Humidity sensor?</b></label>
+            <input class="input" type="checkbox" name="Sensor[]" value="Humidity">
+            <label><b>Gas sensor?</b></label>
+            <input class="input" type="checkbox" name="Sensor[]" value="Gas">
+
+            <input name="register" type="submit" class="pure-button pure-button-primary"
+                   value="Register">
         </div>
     </div>
-    </fieldset>
-    </form>
-    <?php } ?>
 </div>
-</div>
+
+
+

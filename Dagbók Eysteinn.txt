@@ -24,6 +24,18 @@ Skrifaði einnig fall sem gefur TRUE/FALSE gildi ef session er í gangi eða ekki. 
 Vann heima, setti upp layout fyrir síðuna sem gerir síðuna í kjölfarið mun meira responsive. Kláraði að laga örfáa session bögga, logout takkinn virkar rétt núna.
 Í framhaldinu kláraði ég allt validation fyrir formin, síðan ætti að vera 100% safe frá injections. 
 
+Vikan 1-7 Maí
+Gleymdi að skrifa í dagbókina jafnóðum en vann flesta dagana eitthvað í verkefninu.
+Lagaði log in bögga sem voru að henda errorum í mann ef maður skildi formin eftir auð, sama með signuppið. Lagaði footerinn, ég og kristófer unnum síðan að því að gera
+Administrator síðu, contact síðu, about us og privacy policy.
+Það er núna sýnt hver er loggaður inn í footernum, og gögnin eru sótt af gagnagrunninum bara fyrir þann tiltekna user (Sem virkaði ekki áður). 
+Í kjölfarið á því þurfti ég að taka profile síðuna í gegn. 
+Einnig lagaði ég Register House þannig núna er hægt að skrá hús fyrir userinn með checkbox sem velur hvaða skynjara hann myndi vilja hafa.
+Endurskrifaði registerHouse fallið í leiðinni.
+Kláraði hashing fyrir signup og login, blowfish encryption á passwordum sem eru geymd í gagnagrunninum og eiginlega skrifaði bara login fallið upp á nýtt.
+Skrifaði FetchUser og FetchHouse föllin uppá nýtt því núna var hægt að sækja gildi eftir session user.
+
+
 
 
 

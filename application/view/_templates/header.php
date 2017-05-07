@@ -38,6 +38,7 @@ if (isset($_POST['logout']))
     <title>RealTemperature</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
     <!-- JS -->
     <!-- please note: The JavaScript files are loaded in the footer to speed up page construction -->
@@ -59,7 +60,7 @@ if (isset($_POST['logout']))
 
             <ul class="pure-menu-list">
                 <?php
-                if (is_session_started() === TRUE) {
+                if (is_session_started() == true) {
                     echo '<li class="pure-menu-item"><a href="data" class="pure-menu-link">Your sensors</a></li>';
                     echo '<li class="pure-menu-item"><a href="registration" class="pure-menu-link">Register a house</a></li>';
                     echo '<li class="pure-menu-item"><a href="profile" class="pure-menu-link">Account management</a></li>';

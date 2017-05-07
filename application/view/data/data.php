@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION['login']) {
+if ($_SESSION['login'] == true) {
     //header("Location: http://138.68.150.56/Verkefni6/Login");
 } else {
     header("Location: http://138.68.150.56/Verkefni6/Login");
@@ -11,7 +11,10 @@ if ($_SESSION['login']) {
     <div class="splash">
         <!-- <input name="fetch" type="submit" value="Ná í gögn!" class="button"> -->
         <table class="pure-table pure-table-bordered">
-            <h3> Temperature values </h3>
+            <?php foreach ($results as $user) { ?>
+            <H3 class="is-center">Register a house
+                for: <?php if (isset($datas->Fname)) echo "<b>" . htmlspecialchars($user->Fname, ENT_QUOTES, 'UTF-8') . "</b>";
+                } ?></H3>
             <thead style="font-weight: bold;">
             <tr>
                 <td>DataID</td>
@@ -38,5 +41,7 @@ if ($_SESSION['login']) {
             <?php } ?>
             </tbody>
         </table>
+
+
     </div>
 </div>

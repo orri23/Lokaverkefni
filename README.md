@@ -26,7 +26,7 @@ Contact Us síðan: Þar sem notandinn getur haft samband við admins via póst.
 About Us síðan: Þar sem notandinn getur séð um þá sem gerðu síðuna.
 Privacy Policy síðan: Hvernig við hyggjum á að halda upplýsingunum öruggum.
 
-### d.
+### d. Eysteinn sá meira um php en ég gerði eitthvað php líka. Kristófer sá meira um css og útlit og html en Eysteinn gerði líka í því.
 ### e. Skýring á afurð
 
 Notandinn þarf að skrá sig inn (Create Account hnappurinn, Sign Up href-ið eða Log In href-ið ef hann hefur aðgang nú þegar) og sitt húsnæði svo að hann fái að sjá gildin, enginn annar möguleiki til þess að sjá upplýsingarnar. 

@@ -59,7 +59,9 @@ Vann í contact síðunni þar sem notandinn sendir inn einhver skilaboð ef eit
 Kláraði textann fyrir about us síðuna, kláraði logo-ið þar líka. Línkar á síðurnar eru í footer ásamt veðurstöð sem ég bætti inn,
 þurfti research í það, maður lærir alltaf eitthvað nýtt. 
 Hélt áfram með css, breyta hover litum og svona, gerði flottan border á heimasíðu logo-ið, margt smátt um allt, staðsetningu linkana og textanns í footernum.  
-Tók fyrri footer út líka, síðan er að verða ágætlega falleg núna.  
+Tók fyrri footer út líka sem var fyrir, síðan er að verða ágætlega falleg núna.  
+lagaði lit á backgroundinum á hoverinu á hrefunum(linkunum) í footer, það tók mig smá tíma að fatta að ég hafði ekkert tag fyrir li href í css skjalinu - bjó þar af leiðandi til nýtt: (.footer a:hover { ) og setti bara background-color: transparent; og það er fínt núna.
+
 
 
 

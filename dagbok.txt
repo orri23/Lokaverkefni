@@ -63,7 +63,7 @@ Bjó til footer (Hann á að innihalda "About us", hvernig á að hafa samband e
  lagaði lit á backgroundinum á hoverinu á hrefunum(linkunum) í footer, það tók mig smá tíma að fatta að ég hafði ekkert tag fyrir li href í css skjalinu - bjó þar af leiðandi til nýtt: (.footer a:hover { ) og setti bara background-color: transparent; og það er fínt núna.
 
 7.5.2017 - Kristófer 
-Kláraði að gera img file-upload á profile síðunni sem ég var byrjaður á, búið að taka mikinn tíma. Meira css líka...
+Er að klára að gera img file-upload á profile síðunni sem ég var byrjaður á, ekki alveeegg klárað, búið að taka mikinn tíma. Upload klasi, notandinn getur uploadað hvaða mynd sem er á profile síðuna, myndirnar hendast inn í gagnagrunn.  Gerði meira css líka, svona smá breytingar hér og þar...
 
 
 

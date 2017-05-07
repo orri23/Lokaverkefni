@@ -1,5 +1,5 @@
 # Lokaskýrsla
-
+Linkur að vefsíðu: http://138.68.150.56/Verkefni6/home
 ### a. Höfundar
 Höfundar: Eysteinn Orri, Stefán Atli, Kristófer Orri
 

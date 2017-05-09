@@ -4,7 +4,7 @@ Linkur að vefsíðu: http://138.68.150.56/Verkefni6/home
 Höfundar: Eysteinn Orri, Stefán Atli, Kristófer Orri
 
 ### b. Verkefnalýsing
-Hugmyndin að verkefninu er sú að hafa þjónustu fyrir sumarhús/gistiheimili/hótel sem býður upp á það að notandi sér gildin (Hitastig, raka, gas og alkóhól) í sínu valda húsnæði á vefsíðunni, en til þess verður notandinn að skrá sig inn. Vefsíðan les inn gildi af gasskynjara, hita- og rakaskynjara og alkóhól skynjara. Forritunarmálið að baki viðmótsins er PhP og Arduino. Arduino-inn sendir gögn á PHP síðu sem hendir gögnunum inn á SQL server. Notuð var Digital Ocean vefhýsing fyrir PhP síðuna. 
+Hugmyndin að verkefninu er sú að hafa þjónustu fyrir sumarhús/gistiheimili/hótel sem býður upp á það að notandi sér gildin (Hitastig, raka, gas og alkóhól) í sínu valda húsnæði á vefsíðunni, en til þess verður notandinn að skrá sig inn. Vefsíðan les inn gildi af gasskynjara, hita- og rakaskynjara og alkóhól skynjara. Forritunarmálið að baki viðmótsins er PhP og Arduino. Arduino-inn sendir gögn á PHP síðu sem hendir gögnunum inn á SQL server. Notuð var Digital Ocean vefhýsing fyrir PhP síðuna. Mini3 framework var notað.
 
 
 
@@ -15,6 +15,7 @@ PHP til þess að lesa af Arduino tölvunni og henda inn á gagnagrunninn.
 HTML/CSS fyrir notendaviðmót á PHP síðunni.
 Digital Ocean fyrir server hýsingu.
 FileZilla notað til þess að færa frá local inná server.
+Mini 3 framework
 
 Notandinn þarf að skrá sig inn (Create Account hnappurinn, Sign Up href-ið eða Log In href-ið ef hann hefur aðgang nú þegar) og sitt húsnæði svo að hann fái að sjá gildin, enginn annar möguleiki til þess að sjá upplýsingarnar. 
 Um leið og hann loggar hann þá er honum hent á Account Management eða Profile síðuna sína, og þar sér notandinn allar

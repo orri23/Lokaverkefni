@@ -68,6 +68,11 @@ Er að klára að gera img file-upload á profile síðunni sem ég var byrjaðu
 8.5.2017 - Kristófer
 Reynt að tengja file-upload-ið við gagnagrunn svo að myndirnar fara inn í gagnagrunn en það tókst ekki, það kom bara permission denied, sennilega vegna frameworksins. En myndirnar uploadast á serverinn successfully og fara í mynda möppu.
 
+Eytti klukkutíma (23:45 - 00:51) að gera css á takka í file-uploadinu en það var vesen þar sem no file chosen sem er hliðiná choose image takkanum og telst vera með í takkanum (byggt inn) þannig liturinn og allt það sem átti að fara á takkann fór á það líka. Náði samt að gera takka lit og hover á Upload takkann eins og hina takkana á síðunni
+Googleaðist um og fann út ég hide-a bara Choose image í css með opacity:0 og bý til label sem ég includa bara í inputið, bara clicka innan formsins á síðunni til þess að geta valið mynd og voila, lítur betur út. 
+
+Breytti lit á table theadinu í account information og sensor síðunni, liturinn var of skær. Flottara núna. 
+
 
 
  
